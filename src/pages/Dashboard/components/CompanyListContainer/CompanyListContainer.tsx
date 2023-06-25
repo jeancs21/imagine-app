@@ -44,13 +44,9 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
                 >
-                    <div className='flex justify-around w-full p-6 bg-slate-100 rounded-full'>
+                    <div className='flex justify-around w-full p-6 bg-slate-100 rounded-full items-center'>
                         <p className='font-medium'>{company.name}</p>
-                        <div>Inventory</div>
-                        {/*<div className={`${isHovering ? "opacity-100" : "opacity-0"} transition-opacity duration-300 delay-300 ease-in-out`}
-                        >
-                            {isHovering && <InventoryButton />}
-                        </div>*/}
+                        <InventoryButton path='/inventory/' id={company.nit} />
                     </div>
                     <div className='flex justify-around w-96'>
                         <div className='h-6 w-6' onClick={() => handleClick(company)}>

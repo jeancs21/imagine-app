@@ -93,7 +93,7 @@ const AddCompanyForm: FunctionComponent<Props> = (props) => {
                         type='text'
                         {...register("address", { required: true })}
                       />
-                      {errors.name && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
+                      {errors.address && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
                     </div>
                     <div className='flex flex-col gap-2'>
                       <label htmlFor='nit-input'>NIT</label>
@@ -104,7 +104,7 @@ const AddCompanyForm: FunctionComponent<Props> = (props) => {
                         type='text'
                         {...register("nit", { required: true })}
                       />
-                      {errors.name && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
+                      {errors.nit && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
                     </div>
                     <div className='flex flex-col gap-2'>
                       <label htmlFor='phone-input'>Teléfono</label>
@@ -115,7 +115,7 @@ const AddCompanyForm: FunctionComponent<Props> = (props) => {
                         type='text'
                         {...register("phone", { required: true })}
                       />
-                      {errors.name && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
+                      {errors.phone && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
                     </div>
                     <button
                       className='w-36 self-center bg-blue-500 rounded-md p-2 items-center text-white'
