@@ -4,6 +4,7 @@ import CompanyListContainer from '../CompanyListContainer/CompanyListContainer'
 import AddCompanyForm from '../CompanyForm/AddCompanyForm'
 import { AppStore } from '../../../../redux/store'
 import { useSelector } from "react-redux"
+import { Link } from 'react-router-dom'
 
 const CompanyListFetcher = () => {
 
@@ -29,6 +30,12 @@ const CompanyListFetcher = () => {
             >
               Nueva empresa
             </button>
+            <Link
+              to={"/add-product"}
+              className='flex justify-center w-36 bg-green-600 rounded-full p-2 items-center text-white shadow-md hover:shadow-lg shadow-green-400 hover:shadow-green-400 duration-300'
+            >
+              Nuevo Producto
+            </Link>
           </div>
           {companies.length > 0 ?
             <CompanyListContainer companies={companies} />
