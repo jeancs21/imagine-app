@@ -1,5 +1,5 @@
 import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid'
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { AppStore } from '../../../redux/store'

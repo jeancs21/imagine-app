@@ -1,4 +1,3 @@
-import React from 'react'
 import EditProductForm from './Form/EditProductForm'
 
 const EditProduct = () => {

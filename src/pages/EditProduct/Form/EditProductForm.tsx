@@ -1,4 +1,3 @@
-import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AppStore } from '../../../redux/store';
@@ -100,7 +99,3 @@ const EditProductForm = () => {
 }
 
 export default EditProductForm
-
-function dispatch(arg0: any) {
-  throw new Error('Function not implemented.');
-}

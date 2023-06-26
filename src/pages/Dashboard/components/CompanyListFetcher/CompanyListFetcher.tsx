@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import EmptyListMessage from '../EmptyListMessage/EmptyListMessage'
 import CompanyListContainer from '../CompanyListContainer/CompanyListContainer'
 import AddCompanyForm from '../CompanyForm/AddCompanyForm'
 import { AppStore } from '../../../../redux/store'
 import { useSelector } from "react-redux"
 import { Link } from 'react-router-dom'
-import { AdminAccount, UserAccount } from '../../../models/accounts'
+import { AdminAccount } from '../../../models/accounts'
 
 const CompanyListFetcher = () => {
 

@@ -1,10 +1,8 @@
-import React from 'react'
 import ProductFetcher from './components/ProductFetcher'
 import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { AppStore } from '../../redux/store';
 import CompanyDetails from './components/CompanyDetails';
-import { PrivateRoutes } from '../models/routes';
 
 const CompanyInventory = () => {
 
