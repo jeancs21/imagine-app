@@ -35,14 +35,16 @@ const ProductFetcher:FunctionComponent<Props> = (props) => {
   return (
     <>
         <div className='flex flex-col justify-center'>
-            <h1 className='text-3xl self-center p-8'>Lista de productos</h1>
+            <div className='flex justify-between'>
+                <h1 className='text-3xl self-center p-8'>Lista de productos</h1>
+                <button className='p-2 w-46 bg-slate-300 rounded-md' onClick={downloadInventoryAsPDF}>Descargar inventario en PDF</button>
+            </div>
             <div className='self-center container p-8 rounded-md'>
                 {filteredProducts.length > 0 ?
                     <>
                         <div id='inventory-container'>
                             <CardList products={filteredProducts}/>
                         </div>
-                        <button onClick={downloadInventoryAsPDF}>Descargar inventario en PDF</button>
                     </>
                     :
                     <EmptyInventoryMessage />
