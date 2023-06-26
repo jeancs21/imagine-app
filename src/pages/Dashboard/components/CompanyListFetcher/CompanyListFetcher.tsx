@@ -25,7 +25,7 @@ const CompanyListFetcher = () => {
   return (
     <div className='flex justify-center w-full my-16'>
       <div className='flex flex-col'>
-          <div className='flex justify-between items-center mb-8 gap-6'>
+          <div className='flex flex-col sm:flex-row justify-between items-center mb-8 gap-6'>
             <h3 className=' font-medium text-2xl'>Listado de empresas</h3>
             <button
               className={`${userLogged.email === AdminAccount.email ? 'flex' : 'hidden'}  justify-center w-36 bg-blue-500 rounded-full p-2 items-center text-white shadow-md hover:shadow-lg shadow-blue-400 hover:shadow-blue-400 duration-300`}
