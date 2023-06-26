@@ -14,8 +14,8 @@ export const loggedUserSlice = createSlice({
         login: (_, action) => {
             return action.payload;
         },
-        logout: (state) => {
-            state = LoggedUserEmptyState;
+        logout: () => {
+            return LoggedUserEmptyState
         },
     },
 });
