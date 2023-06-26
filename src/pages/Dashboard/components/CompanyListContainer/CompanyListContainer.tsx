@@ -49,7 +49,7 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
                 >
-                    <div className='flex justify-around w-full p-6 bg-slate-100 rounded-full items-center'>
+                    <div className='flex sm:justify-around justify-between w-full sm:p-6 p-2 bg-slate-100 rounded-full items-center gap-6'>
                         <p className='font-medium'>{company.name}</p>
                         <InventoryButton path='/inventory/' id={company.nit} />
                     </div>
