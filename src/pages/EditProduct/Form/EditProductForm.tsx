@@ -33,7 +33,7 @@ const EditProductForm = () => {
               dispatch(updateProduct(updatedProduct))
               reset(ProductEmptyState)
               setTimeout(() => {
-                navigate("/")
+                navigate("/dashboard")
               }, 1000)
         }
         catch (error) {

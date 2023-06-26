@@ -15,7 +15,7 @@ const CompanyInventory = () => {
 
   return (
     <div className='flex flex-col w-full'>
-      <Link to={"/"}>Volver a inicio</Link>
+      <Link to={"/dashboard"}>Volver a inicio</Link>
       <div className='font-medium text-2xl my-8'>Inventario</div>
       <CompanyDetails company={company} />
       <div className='flex mt-10'>

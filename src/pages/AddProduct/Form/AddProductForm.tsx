@@ -34,7 +34,7 @@ const AddProductForm: FunctionComponent<Props> = (props) => {
             dispatch(createProduct(data))
             reset(ProductEmptyState)
             setTimeout(() => {
-              navigate("/")
+              navigate("/dashboard")
             }, 1000)
       }
       catch (error) {
