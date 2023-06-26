@@ -1,5 +1,3 @@
-import { Company } from "./company";
-
 export interface Product {
     id: number,
     name: string,

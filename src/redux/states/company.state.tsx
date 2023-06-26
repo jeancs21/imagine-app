@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Company } from "../../pages/models/company";
-import { companiesData } from "../../mock/companies";
 
 export const CompanyEmptyState: Company = {
     name: "",
