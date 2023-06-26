@@ -45,11 +45,11 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
             return (
                 <div
                     key={i}
-                    className='flex w-full p-4 justify-between  items-center rounded-md'
+                    className='flex flex-col sm:flex-row gap-6 sm:gap-0 w-full p-4 justify-between  items-center rounded-md'
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
                 >
-                    <div className='flex sm:justify-around justify-between w-full sm:p-6 p-2 bg-slate-100 rounded-full items-center gap-6'>
+                    <div className='flex sm:justify-between justify-around w-full sm:p-6 p-2 bg-slate-100 rounded-full items-center gap-6'>
                         <p className='font-medium'>{company.name}</p>
                         <InventoryButton path='/inventory/' id={company.nit} />
                     </div>
