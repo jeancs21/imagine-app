@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react'
+import { FunctionComponent, useState } from 'react'
 import InventoryButton from './InventoryButton';
 import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid'
 import { Company } from '../../../models/company';
@@ -20,16 +20,6 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
 
     const [isOpen, setOpen] = useState(false)
 
-    const [isHovering, setHovering] = useState(false);
-
-    const handleMouseOver = () => {
-        setHovering(true)
-    }
-
-    const handleMouseOut = () => {
-        setHovering(false)
-    }
-
     const handleClick = (item: Company) => {
         setSelectedItem(item)
         setOpen(true)
@@ -46,8 +36,6 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
                 <div
                     key={i}
                     className='flex flex-col sm:flex-row gap-6 sm:gap-0 w-full p-4 justify-between  items-center rounded-md'
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
                 >
                     <div className='flex sm:justify-between justify-around w-full sm:p-6 p-2 bg-slate-100 rounded-full items-center gap-6'>
                         <p className='font-medium'>{company.name}</p>

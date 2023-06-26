@@ -1,4 +1,4 @@
-import React, { createContext, FunctionComponent, ReactElement, useContext, useState } from "react";
+import { createContext, FunctionComponent, ReactElement, useContext, useState } from "react";
 
 export const LayoutContext = createContext({
     isDrawerOpened: false,

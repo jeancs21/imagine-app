@@ -1,4 +1,4 @@
-import { Fragment, FunctionComponent, useEffect, useState } from "react";
+import { Fragment, FunctionComponent, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Company } from "../../../models/company";
 import { Dialog, Transition } from "@headlessui/react";

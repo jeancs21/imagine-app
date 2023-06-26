@@ -1,4 +1,3 @@
-import React from 'react'
 import CompanyListFetcher from './components/CompanyListFetcher/CompanyListFetcher'
 import Header from '../../components/Header'
 

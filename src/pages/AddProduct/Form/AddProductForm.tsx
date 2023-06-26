@@ -1,4 +1,3 @@
-import { ChangeEvent, FunctionComponent, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { ProductEmptyState, createProduct } from "../../../redux/states/product.state";
@@ -6,11 +5,8 @@ import { Product } from "../../models/product";
 import { useNavigate } from "react-router-dom";
 import { AppStore } from "../../../redux/store";
 
-type Props = {
-    
-}
 
-const AddProductForm: FunctionComponent<Props> = (props) => {
+const AddProductForm = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
