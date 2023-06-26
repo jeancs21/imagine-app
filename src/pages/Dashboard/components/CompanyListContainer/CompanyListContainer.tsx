@@ -4,6 +4,9 @@ import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid'
 import { Company } from '../../../models/company';
 import { CompanyEmptyState } from '../../../../redux/states/company.state';
 import EditCompanyForm from '../CompanyForm/EditCompany';
+import { useSelector } from 'react-redux';
+import { AppStore } from '../../../../redux/store';
+import { AdminAccount } from '../../../models/accounts';
 
 type Props = {
     companies: Company[]
@@ -12,6 +15,8 @@ type Props = {
 const CompanyListContainer:FunctionComponent<Props> = (props) => {
 
     const [selectedItem, setSelectedItem] = useState<Company>(CompanyEmptyState)
+
+    const userLogged = useSelector((store: AppStore) => store.loggedUser)
 
     const [isOpen, setOpen] = useState(false)
 
@@ -48,14 +53,16 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
                         <p className='font-medium'>{company.name}</p>
                         <InventoryButton path='/inventory/' id={company.nit} />
                     </div>
-                    <div className='flex justify-around w-96'>
-                        <div className='h-6 w-6' onClick={() => handleClick(company)}>
-                            <PencilSquareIcon />
+                    {userLogged.email === AdminAccount.email &&
+                        <div className='flex justify-around w-96'>
+                            <div className='h-6 w-6' onClick={() => handleClick(company)}>
+                                <PencilSquareIcon />
+                            </div>
+                            <div className='h-6 w-6'>
+                                <TrashIcon />
+                            </div>
                         </div>
-                        <div className='h-6 w-6'>
-                            <TrashIcon />
-                        </div>
-                    </div>
+                    }
                 </div>
             )
         })
