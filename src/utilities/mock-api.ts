@@ -1,14 +1,15 @@
+import { AdminAccount, UserAccount } from "../pages/models/accounts";
 import { LoggedUser } from "../pages/models/loggedUser.model";
 
 export function mockAuthentication(user: LoggedUser): Promise<boolean> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (user.email === "admin@test.com" && user.password === "supersecret") {
-        user.username = "admin";
+      if (user.email === AdminAccount.email && user.password === AdminAccount.password) {
+        user.username = AdminAccount.username;
         resolve(true);
       }
-      else if (user.email === "user@test.com" && user.password === "secret") {
-        user.username = "imagine user"
+      else if (user.email === UserAccount.email && user.password === UserAccount.password) {
+        user.username = UserAccount.username
         resolve(true);
       }
        else {

@@ -4,7 +4,7 @@ import { LoggedUser } from "../../pages/models/loggedUser.model";
 export const LoggedUserEmptyState: LoggedUser = {
     username: "",
     email: "",
-    password: ""
+    password: "",
 }
 
 export const loggedUserSlice = createSlice({

@@ -5,10 +5,13 @@ import AddCompanyForm from '../CompanyForm/AddCompanyForm'
 import { AppStore } from '../../../../redux/store'
 import { useSelector } from "react-redux"
 import { Link } from 'react-router-dom'
+import { AdminAccount, UserAccount } from '../../../models/accounts'
 
 const CompanyListFetcher = () => {
 
     const companies = useSelector((store: AppStore) => store.company)
+
+    const userLogged = useSelector((store: AppStore) => store.loggedUser)
 
     let [isOpen, setIsOpen] = useState(false)
 
@@ -22,17 +25,17 @@ const CompanyListFetcher = () => {
   return (
     <div className='flex justify-center w-full my-16'>
       <div className='flex flex-col'>
-          <div className='flex justify-between items-center mb-8'>
+          <div className='flex justify-between items-center mb-8 gap-6'>
             <h3 className=' font-medium text-2xl'>Listado de empresas</h3>
             <button
-              className='flex justify-center w-36 bg-blue-500 rounded-full p-2 items-center text-white shadow-md hover:shadow-lg shadow-blue-400 hover:shadow-blue-400 duration-300'
+              className={`${userLogged.email === AdminAccount.email ? 'flex' : 'hidden'}  justify-center w-36 bg-blue-500 rounded-full p-2 items-center text-white shadow-md hover:shadow-lg shadow-blue-400 hover:shadow-blue-400 duration-300`}
               onClick={openModal}
             >
               Nueva empresa
             </button>
             <Link
               to={"/add-product"}
-              className='flex justify-center w-36 bg-green-600 rounded-full p-2 items-center text-white shadow-md hover:shadow-lg shadow-green-400 hover:shadow-green-400 duration-300'
+              className={`${userLogged.email === AdminAccount.email ? 'flex' : 'hidden'} justify-center w-36 bg-green-600 rounded-full p-2 items-center text-white shadow-md hover:shadow-lg shadow-green-400 hover:shadow-green-400 duration-300`}
             >
               Nuevo Producto
             </Link>

@@ -2,6 +2,9 @@ import { FunctionComponent } from "react";
 import { GiftIcon, HomeIcon, UserIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import UserDropDownMenu from "./UserDropDownMenu";
+import { useSelector } from "react-redux";
+import { AppStore } from "../redux/store";
+import { AdminAccount } from "../pages/models/accounts";
 
 type Props = {
 	isOpen: boolean;
@@ -9,6 +12,8 @@ type Props = {
 };
 
 const Drawer: FunctionComponent<Props> = (props) => {
+	
+	const userLogged = useSelector((store: AppStore) => store.loggedUser)
 
 	return (
 		<div
@@ -36,12 +41,15 @@ const Drawer: FunctionComponent<Props> = (props) => {
 							<p className=" text-sm pl-4">Inicio</p>
 						</Link>
 					</li>
-					<li className="border-b-2  border-slate-50 justify-center items-center duration-300 hover:border-blue-400" >
-						<Link to={"/add-product"} className="flex p-4 h-full items-center  duration-300 hover:bg-blue-100" onClick={() => props.close()}>
-							<GiftIcon className="w-6 h-6 fill-blue-500" />
-							<p className="text-sm pl-4 ">Nuevo producto</p>
-						</Link>
-					</li>
+
+					{userLogged.email === AdminAccount.email &&
+						<li className="border-b-2  border-slate-50 justify-center items-center duration-300 hover:border-blue-400" >
+							<Link to={"/add-product"} className="flex p-4 h-full items-center  duration-300 hover:bg-blue-100" onClick={() => props.close()}>
+								<GiftIcon className="w-6 h-6 fill-blue-500" />
+								<p className="text-sm pl-4 ">Nuevo producto</p>
+							</Link>
+						</li>
+					}
 				</ul>
 			</div>
 		</div>

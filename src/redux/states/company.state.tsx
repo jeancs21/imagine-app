@@ -9,7 +9,7 @@ export const CompanyEmptyState: Company = {
     phone: ""
 }
 
-export const CompanyState: Company[] = companiesData
+export const CompanyState: Company[] = []
 
 export const companySlice = createSlice({
     name: 'company',

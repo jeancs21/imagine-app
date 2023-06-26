@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-        <header className='w-full'>
+        <header className='w-full mt-4'>
           <div className='flex justify-end items-center w-full gap-6'>
             <div className="flex gap-4">
               <UserIcon className="w-6 h-6" />

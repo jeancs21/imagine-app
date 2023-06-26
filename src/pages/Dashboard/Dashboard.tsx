@@ -5,8 +5,8 @@ import Header from '../../components/Header'
 const Dashboard = () => {
   return (
     <div>
-        <div>Dashboard</div>
         <Header />
+        <div className='font-medium text-yellow-700 text-3xl ml-4'>Imagine App!</div>
         <CompanyListFetcher />
     </div>
   )
