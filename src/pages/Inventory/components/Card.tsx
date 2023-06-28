@@ -18,12 +18,19 @@ const Card:FunctionComponent<Props> = (props) => {
   const userLogged = useSelector((store: AppStore) => store.loggedUser)
   
   return (
-    <div className=' flex flex-col w-64 bg-slate-100 rounded-lg justify-center p-3 m-4 flex-wrap hover:scale-[1.1] duration-300'>
-        <div className='text-center'>
+    <div className=' flex flex-col max-w-xs bg-slate-100 rounded-lg justify-center p-3 m-4 flex-wrap hover:scale-[1.1] duration-300'>
+        <div className='text-center flex flex-col w-full'>
             <p className='text-2xl font-medium mb-4'>{props.name}</p>
             <p>{`Cantidad: ${props.quantity}`}</p>
             <p>{`$${props.price}`}</p>
-            <p>{props.description}</p>
+            <textarea
+              cols={30}
+              rows={4}
+              readOnly
+              className=' border-none outline-none bg-transparent resize-none text-xs sm:text-sm'
+            >
+              {props.description}
+            </textarea>
         </div>
         {userLogged.email === AdminAccount.email &&
           <div className='flex justify-around mt-6'>
