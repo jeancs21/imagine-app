@@ -8,7 +8,7 @@ type Props = {
 
 const CardList:FunctionComponent<Props> = (props) => {
   return (
-    <div className='flex flex-wrap'>
+    <div className='flex flex-wrap justify-center'>
         {props.products.map((product, i) => {
             return (
                 <Card

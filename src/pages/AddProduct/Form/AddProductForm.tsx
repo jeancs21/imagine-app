@@ -91,11 +91,11 @@ const AddProductForm = () => {
             </div>
             <div className='flex flex-col gap-2'>
                 <label htmlFor='description-input'>Descripción</label>
-                <input
+                <textarea
                     id='description-input'
                     className='rounded-md p-2 border border-black'
                     placeholder='Descripción'
-                    type='text'
+                    maxLength={100}
                     {...register("description", { required: true })}
                 />
                 {errors.description && <span className='text-red-600'>Este campo es requerido o datos incorrectos</span>}
