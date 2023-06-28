@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { LoggedUser } from "../../pages/models/loggedUser.model";
+import { LoggedUser } from "../../models/loggedUser.model";
 
 export const LoggedUserEmptyState: LoggedUser = {
     username: "",

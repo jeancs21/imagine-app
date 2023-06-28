@@ -6,7 +6,7 @@ import EditProduct from '../pages/EditProduct/EditProduct'
 import LogIn from '../pages/Login/LogIn'
 import { useLayoutContext } from '../context/LayoutContext'
 import Drawer from '../components/Drawer'
-import { PrivateRoutes, PublicRoutes } from '../pages/models/routes'
+import { PrivateRoutes, PublicRoutes } from '../models/routes'
 import AuthGuard from '../guards/auth.guard'
 import NotFound from '../pages/NotFound/NotFound'
 const RouterApp = () => {

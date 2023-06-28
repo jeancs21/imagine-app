@@ -1,5 +1,5 @@
-import { AdminAccount, UserAccount } from "../pages/models/accounts";
-import { LoggedUser } from "../pages/models/loggedUser.model";
+import { AdminAccount, UserAccount } from "../models/accounts";
+import { LoggedUser } from "../models/loggedUser.model";
 
 export function mockAuthentication(user: LoggedUser): Promise<boolean> {
   return new Promise((resolve, reject) => {

@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { Company } from '../../models/company'
+import { Company } from '../../../models/company'
 
 type Props = {
     company: Company

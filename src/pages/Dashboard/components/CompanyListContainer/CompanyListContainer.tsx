@@ -1,12 +1,12 @@
 import { FunctionComponent, useState } from 'react'
 import InventoryButton from './InventoryButton';
 import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid'
-import { Company } from '../../../models/company';
+import { Company } from '../../../../models/company';
 import { CompanyEmptyState } from '../../../../redux/states/company.state';
 import EditCompanyForm from '../CompanyForm/EditCompany';
 import { useSelector } from 'react-redux';
 import { AppStore } from '../../../../redux/store';
-import { AdminAccount } from '../../../models/accounts';
+import { AdminAccount } from '../../../../models/accounts';
 
 type Props = {
     companies: Company[]

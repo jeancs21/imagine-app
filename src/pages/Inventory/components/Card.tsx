@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { AppStore } from '../../../redux/store'
-import { AdminAccount } from '../../models/accounts'
+import { AdminAccount } from '../../../models/accounts'
 
 type Props = {
     id: number,

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { AppStore } from '../../../redux/store'
 import CardList from './CardList'
 import EmptyInventoryMessage from './EmptyInventoryMessage'
-import { Company } from '../../models/company'
+import { Company } from '../../../models/company'
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 

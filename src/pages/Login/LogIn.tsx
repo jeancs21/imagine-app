@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { LoggedUserEmptyState, login } from '../../redux/states/loggedUser.state';
-import { LoggedUser } from '../models/loggedUser.model';
+import { LoggedUser } from '../../models/loggedUser.model';
 import { mockAuthentication } from '../../utilities/mock-api';
 import { manageLoggedUserState } from '../../services/persist-loggedUser-info.service';
 

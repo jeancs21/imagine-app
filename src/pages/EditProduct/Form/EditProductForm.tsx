@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AppStore } from '../../../redux/store';
 import { useForm } from 'react-hook-form';
 import { ProductEmptyState, updateProduct } from '../../../redux/states/product.state';
-import { Product } from '../../models/product';
+import { Product } from '../../../models/product';
 
 const EditProductForm = () => {
 
