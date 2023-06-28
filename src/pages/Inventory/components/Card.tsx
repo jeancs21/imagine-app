@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { AppStore } from '../../../redux/store'
-import { AdminAccount } from '../../models/accounts'
+import { AdminAccount } from '../../../models/accounts'
 
 type Props = {
     id: number,
@@ -22,7 +22,7 @@ const Card:FunctionComponent<Props> = (props) => {
         <div className='text-center'>
             <p className='text-2xl font-medium mb-4'>{props.name}</p>
             <p>{`Cantidad: ${props.quantity}`}</p>
-            <p>{props.price}</p>
+            <p>{`$${props.price}`}</p>
             <p>{props.description}</p>
         </div>
         {userLogged.email === AdminAccount.email &&

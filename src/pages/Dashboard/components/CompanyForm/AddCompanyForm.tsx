@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, FunctionComponent } from 'react'
-import { Company } from '../../../models/company'
+import { Company } from '../../../../models/company'
 import { useForm } from 'react-hook-form'
 import { CompanyEmptyState, createCompany } from '../../../../redux/states/company.state'
 import { useDispatch } from 'react-redux'

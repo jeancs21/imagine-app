@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { Product } from '../../models/product'
+import { Product } from '../../../models/product'
 import Card from './Card'
 
 type Props = {

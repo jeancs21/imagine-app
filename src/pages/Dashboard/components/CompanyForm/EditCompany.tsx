@@ -1,6 +1,6 @@
 import { Fragment, FunctionComponent, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Company } from "../../../models/company";
+import { Company } from "../../../../models/company";
 import { Dialog, Transition } from "@headlessui/react";
 import { AppStore } from "../../../../redux/store";
 import { useSelector, useDispatch } from 'react-redux';

@@ -1,4 +1,4 @@
-import { LoggedUser } from "../pages/models/loggedUser.model";
+import { LoggedUser } from "../models/loggedUser.model";
 
 export const persistDbLoggedUserState = (loggedUserInfo: LoggedUser) => {
     localStorage.setItem('loggedUser_info', JSON.stringify({...loggedUserInfo}));

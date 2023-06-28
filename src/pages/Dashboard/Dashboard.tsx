@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <div>
         <Header />
-        <div className='font-medium text-yellow-700 text-3xl ml-4'>Imagine App!</div>
+        <div className='font-medium text-yellow-700 text-2xl sm:text-3xl ml-4 mt-8 sm:mt-0'>Imagine App!</div>
         <CompanyListFetcher />
     </div>
   )

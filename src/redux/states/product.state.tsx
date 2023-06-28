@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Product } from "../../pages/models/product";
+import { Product } from "../../models/product";
 
 export const ProductEmptyState: Product = {
     id: 0,

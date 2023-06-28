@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import { AppStore } from "../redux/store"
 import { Navigate, Outlet } from "react-router-dom"
-import { PublicRoutes } from "../pages/models/routes"
+import { PublicRoutes } from "../models/routes"
 
 const AuthGuard = () => {
     const userLogged = useSelector((store: AppStore) => store.loggedUser)

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import UserDropDownMenu from "./UserDropDownMenu";
 import { useSelector } from "react-redux";
 import { AppStore } from "../redux/store";
-import { AdminAccount } from "../pages/models/accounts";
+import { AdminAccount } from "../models/accounts";
 
 type Props = {
 	isOpen: boolean;

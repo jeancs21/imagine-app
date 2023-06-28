@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { AppStore } from '../../../../redux/store'
-import { AdminAccount } from '../../../models/accounts'
+import { AdminAccount } from '../../../../models/accounts'
 
 const EmptyListMessage = () => {
   const userLogged = useSelector((store: AppStore) => store.loggedUser)
