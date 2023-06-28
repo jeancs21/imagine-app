@@ -35,9 +35,9 @@ const ProductFetcher:FunctionComponent<Props> = (props) => {
   return (
     <>
         <div className='flex flex-col justify-center'>
-            <div className='flex justify-between'>
-                <h1 className='text-3xl self-center p-8'>Lista de productos</h1>
-                <button className='p-2 w-46 bg-slate-300 rounded-md' onClick={downloadInventoryAsPDF}>Descargar inventario en PDF</button>
+            <div className='flex justify-between w-full'>
+                <p className='text-xl sm:text-2xl self-center'>Lista de productos</p>
+                <button className='p-1 w-32 sm:w-46 bg-slate-300 hover:bg-slate-200 duration-300 rounded-md text-xs sm:text-base' onClick={downloadInventoryAsPDF}>Descargar inventario en PDF</button>
             </div>
             <div className='self-center container p-8 rounded-md'>
                 {filteredProducts.length > 0 ?

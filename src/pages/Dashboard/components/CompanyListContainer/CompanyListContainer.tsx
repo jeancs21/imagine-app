@@ -30,14 +30,15 @@ const CompanyListContainer:FunctionComponent<Props> = (props) => {
         setOpen(false)
     }
   return (
-    <div className='container flex flex-col p-8  border border-slate-400 rounded-lg gap-4'>
+    <div className='container flex flex-col p-8  border border-slate-400 rounded-lg gap-4 w-full'>
         {props.companies.map((company, i) => {
             return (
                 <div
                     key={i}
                     className='flex flex-col sm:flex-row gap-6 sm:gap-0 w-full p-4 justify-between  items-center rounded-md'
                 >
-                    <div className='flex sm:justify-between justify-around w-full sm:p-6 p-2 bg-slate-100 rounded-full items-center gap-6'>
+                    <div className={`flex sm:justify-between justify-evenly w-full sm:p-6 p-2 bg-slate-100 rounded-full items-center gap-6
+                    ${company.name.length > 20 && 'flex-col'}`}>
                         <p className='font-medium'>{company.name}</p>
                         <InventoryButton path='/inventory/' id={company.nit} />
                     </div>

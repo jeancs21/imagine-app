@@ -1,8 +1,9 @@
 import ProductFetcher from './components/ProductFetcher'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { AppStore } from '../../redux/store';
 import CompanyDetails from './components/CompanyDetails';
+import BackToHomeButton from '../../components/BackToHomeButton';
 
 const CompanyInventory = () => {
 
@@ -15,7 +16,7 @@ const CompanyInventory = () => {
   return (
     <div className='flex flex-col w-full'>
       <div className='ml-4 mt-4'>
-        <Link to={"/dashboard"}>Volver a inicio</Link>
+        <BackToHomeButton />
         <div className='font-medium text-2xl my-8 text-yellow-600'>Inventario</div>
         <CompanyDetails company={company} />
       </div>

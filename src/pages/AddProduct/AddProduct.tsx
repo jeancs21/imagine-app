@@ -1,9 +1,13 @@
+import BackToHomeButton from '../../components/BackToHomeButton'
 import AddProductForm from './Form/AddProductForm'
 
 const AddProduct = () => {
   return (
-    <div className='flex justify-center w-full'>
-        <div className='flex flex-col mt-10'>
+    <div className='flex flex-col w-full'>
+        <div className='ml-4 mt-6'>
+          <BackToHomeButton />
+        </div>
+        <div className='flex items-center flex-col mt-10'>
             <div className='font-medium text-2xl mb-8'>Agregar Producto</div>
             <AddProductForm />
         </div>
